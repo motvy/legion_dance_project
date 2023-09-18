@@ -1,0 +1,24 @@
+# Ignore Django settings file
+legion_dance/legion_dance/settings.py
+
+# Ignore Django local settings file
+legion_dance/legion_dance/settings_local.py
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+*.pyo
+
+# Ignore migrations and database files
+*.sqlite3
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Ignore log files
+*.log
+
+# Ignore media files
+/media
+
+# Ignore virtual environment
+venv/
