@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'public/style/All.css' %}">
+    <link rel="stylesheet" href="{% static 'public/style/Pages.css' %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="links">
+                <a href='{% url "profile" %}'><img src="{% static 'public/img/logo_color.png' %}" alt="logo" id="logo-head"></a>
+                <a href="https://vk.com/legionbmstu"><img src="{% static 'public/img/vk.png' %}" alt="vk" id="vk"></a>
+                <a href="https://t.me/legionbmstu"><img src="{% static 'public/img/tg.png' %}" alt="tg" id="tg"></a>
+            </div>
+            <button class="enter"><span class="enter-l">ВЫХОД ЕСТЬ</span></button>
+        </div>
+    </header>
+    {% block main %} {% endblock %}
+</body>
+<div class="footer"></div>
+</html>

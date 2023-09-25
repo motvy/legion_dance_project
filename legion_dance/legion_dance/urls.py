@@ -15,12 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from user_profile.views import profile
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', profile, name='profile'),
+    path('events/', include('events.urls', namespace='events')),
+    path('progress/', include('progress.urls', namespace='progress')),
+    path('messenger/', include('messenger.urls', namespace='messenger')),
 ]
 
 if settings.DEBUG:

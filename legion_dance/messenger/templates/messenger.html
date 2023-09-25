@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<main>
+    <div class="l-column"> </div>
+    <div class="center-column"> 
+        <div class="buttons-left">
+            <button class="button pass" onclick="document.location='{% url "profile" %}'"><img src="{% static 'public/img/profile.svg' %}" alt="profile"></button>
+            <button class="button pass" onclick="document.location='{% url "progress:index" %}'"><img src="{% static 'public/img/progress.svg' %}" alt="progress"></button>
+            <button class="button mes act" onclick="document.location=''"><img src="{% static 'public/img/message.svg' %}" alt="message"></button>
+            <button class="button pass" onclick="document.location='{% url "events:index" %}'"><img src="{% static 'public/img/calendar.svg' %}" alt="calendar"></a>
+            <div></div>
+        </div>
+        <div class="window">
+        </div>
+    </div>
+    <div class="r-column"> </div>
+</main>
+{% endblock %}

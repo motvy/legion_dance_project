@@ -1,0 +1,66 @@
+.enter {
+    width: 172px;
+    height: 39px;
+    border: 3px solid #FFFFFF;
+    border-radius: 17px;
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    background-color: #1C1C1C;
+}
+.enter-l {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.center-column {
+    display: grid;
+    grid-template-columns: auto 1100px;
+    height: 100%;
+}
+.buttons-left {
+    margin-top: 30px;
+    padding-bottom: 253px;
+    display: grid;
+    grid-template-rows: 80px 80px 80px 80px 1fr;
+    height: 100%; 
+}
+.window {
+    margin-top: 0px;
+    width: 100%;
+    height: 95%;
+    background: #313131;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) 0px;
+    border-radius: 0px 20px 20px 20px;
+
+} 
+.button {
+    width: 100px;
+    height: 80px;
+    border: none;
+}
+.act {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #313131;
+}
+.pass {
+    background: #C10F0F;
+    opacity: 0.2;
+    border-radius: 30px 0 0 30px;;
+}
+.prof {
+    border-radius: 30px 0 0 30px;
+}
+.mes {
+    border-radius: 30px 0 0 30px;
+}
+.cal {
+    border-radius: 30px 0 0 30px;
+}
+.prog {
+    border-radius: 30px 0 0 30px;
+}

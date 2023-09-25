@@ -1,0 +1,108 @@
+
+.center-column {
+    background-image: url("../img/logo_transporent.png");
+    background-position: center  center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    vertical-align: middle;
+}
+.form {
+    mix-blend-mode: screen;
+    background: rgba(87, 93, 107, 0.4);
+    width: 434px;
+}
+.external {
+    margin-left:auto;
+    margin-right: auto;
+    /* height: 495px; */
+    border-radius: 60px; 
+    display: grid;
+    grid-template-rows: 95px auto;
+}
+.up {
+    line-height: 95px;
+    border-radius: 60px 60px 0 0;
+    text-align: center; 
+    /* display: grid; */
+}
+.name-l {
+    display: inline-block;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;  
+    color: #FFFFFF;
+    line-height: normal;
+    vertical-align: middle;
+
+}
+.field {
+    width: 370px;
+    display: grid;
+    grid-template-columns: 23px 209px;
+    grid-column-gap: 50px;
+    vertical-align: middle;
+}
+.b {
+    grid-row-gap: 8px;
+    height: 10px;
+}
+
+s {
+    grid-row-gap: 15px;
+    height: 23px;
+}
+.input-field {
+    height: 27px; 
+    background: transparent;
+    border: none;
+    color: #FFFFFF; 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.input-field::placeholder {
+    color: #FFFFFF; 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 16px;
+}
+.img-field {
+    height: 23px;
+    width: 23px;
+}
+.submit {
+    width: 240px;
+    height: 62px;
+    border-radius: 15px;
+    mix-blend-mode: screen;
+    background: rgba(87, 93, 107, 0.4);
+    border: none;
+    margin-left: 60px;
+}
+.external-field {
+    display: grid;
+    grid-row-gap: 50px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+.signup {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.sign {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #E34D56;
+    margin-top: -250px;
+}

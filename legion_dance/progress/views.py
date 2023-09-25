@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def progress(request):
+    context = {'title': 'Progress'}
+    return render(request, 'progress.html', context)
