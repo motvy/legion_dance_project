@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+import messenger.models as messenger_models
+
+admin.site.register(messenger_models.Chat)
+admin.site.register(messenger_models.Message)

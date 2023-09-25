@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'public/style/All.css' %}">
     <link rel="stylesheet" href="{% static 'public/style/Pages.css' %}">
+    <link rel="shortcut icon" href="{% static 'public/\img/logo_color.png' %}">
     <title>{{ title }}</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <a href="https://vk.com/legionbmstu"><img src="{% static 'public/img/vk.png' %}" alt="vk" id="vk"></a>
                 <a href="https://t.me/legionbmstu"><img src="{% static 'public/img/tg.png' %}" alt="tg" id="tg"></a>
             </div>
-            <button class="enter"><span class="enter-l">ВЫХОД ЕСТЬ</span></button>
+            <button class="enter" onclick="document.location='{% url "profile" %}'"><span class="enter-l">ВЫХОД ЕСТЬ</span></button>
         </div>
     </header>
     {% block main %} {% endblock %}
