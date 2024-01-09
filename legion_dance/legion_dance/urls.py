@@ -19,12 +19,10 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
-from user_profile.views import profile
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', profile, name='profile'),
+    path('', include('user_profile.urls', namespace='profile')),
     path('events/', include('events.urls', namespace='events')),
     path('progress/', include('progress.urls', namespace='progress')),
     path('messenger/', include('messenger.urls', namespace='messenger')),

@@ -28,7 +28,7 @@
 }
 .name-l {
     display: inline-block;
-    font-family: 'Gilroy';
+    font-family: 'system-ui';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -41,68 +41,97 @@
 .field {
     width: 370px;
     display: grid;
-    grid-template-columns: 23px 209px;
-    grid-column-gap: 50px;
+    grid-template-columns: 1px 209px;
+    grid-column-gap: 30px;
     vertical-align: middle;
 }
 .b {
-    grid-row-gap: 8px;
-    height: 10px;
+    grid-row-gap: 10px;
+    height: 0px;
 }
 
-s {
+.s {
     grid-row-gap: 15px;
-    height: 23px;
+    height: 8px;
 }
 .input-field {
     height: 27px; 
     background: transparent;
     border: none;
     color: #FFFFFF; 
-    font-family: 'Gilroy';
+    font-family: 'system-ui';
     font-style: normal;
     font-size: 16px;
     white-space: nowrap;
     overflow: hidden;
+    width: 338px;
 }
 .input-field::placeholder {
     color: #FFFFFF; 
-    font-family: 'Gilroy';
+    font-family: 'system-ui';
     font-style: normal;
     font-size: 16px;
 }
 .img-field {
     height: 23px;
     width: 23px;
+    margin-top: 2px;
+}
+.img-team-field {
+    height: 30px;
+    width: 30px;
+    margin-top: 2px;
 }
 .submit {
     width: 240px;
-    height: 62px;
+    height: 50px;
     border-radius: 15px;
     mix-blend-mode: screen;
     background: rgba(87, 93, 107, 0.4);
     border: none;
-    margin-left: 60px;
+    margin-left: 64px;
+    margin-top: -15px;
+}
+.submit_up {
+    width: 240px;
+    height: 50px;
+    border-radius: 15px;
+    mix-blend-mode: screen;
+    background: rgba(87, 93, 107, 0.4);
+    border: none;
+    margin-left: 64px;
+    margin-top: 15px;
 }
 .external-field {
     display: grid;
     grid-row-gap: 50px;
     padding-left: 32px;
     padding-right: 32px;
-    padding-top: 28px;
-    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 .signup {
-    font-family: 'Gilroy';
+    font-family: 'system-ui';
     font-style: normal;
-    font-size: 24px;
+    font-size: 20px;
     color: #FFFFFF;
 }
 .sign {
-    font-family: 'Gilroy';
+    font-family: 'system-ui';
     font-style: normal;
     font-size: 20px;
     text-decoration: none;
     color: #E34D56;
-    margin-top: -250px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+.forgot {
+    font-family: 'system-ui';
+    font-style: normal;
+    font-size: 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: right;
+    margin-bottom: -30px;
 }

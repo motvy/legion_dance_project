@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'public/style/All.css' %}">
-    <link rel="stylesheet" href="{% static 'public/style/Pages.css' %}">
+    <link rel="stylesheet" href="{% static 'public/style/Login_SignUp.css' %}">
     <link rel="shortcut icon" href="{% static 'public/img/logo_color.png' %}">
     <title>{{ title }}</title>
 </head>
-<body>
+<body >
     <header>
         <div class="head">
             <div class="links">
@@ -19,10 +19,12 @@
                 <a href="https://vk.com/legionbmstu"><img src="{% static 'public/img/vk.png' %}" alt="vk" id="vk"></a>
                 <a href="https://t.me/legionbmstu"><img src="{% static 'public/img/tg.png' %}" alt="tg" id="tg"></a>
             </div>
-            <button class="enter" onclick="document.location='{% url "profile:login" %}'"><span class="enter-l">ВЫХОД ЕСТЬ</span></button>
         </div>
     </header>
-    {% block main %} {% endblock %}
+    <main>
+        <div class="l-column"> </div>
+        {% block main %} {% endblock %}
+        <div class="r-column"> </div>
+    </main>
 </body>
-<div class="footer"></div>
 </html>
