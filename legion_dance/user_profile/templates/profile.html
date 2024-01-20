@@ -7,12 +7,92 @@
     <div class="center-column"> 
         <div class="buttons-left">
             <button class="button prof act" onclick="document.location=''"><img src="{% static 'public/img/profile.svg' %}" alt="profile"></button>
-            <button class="button pass" onclick="document.location='{% url "progress:index" %}'"><img src="{% static 'public/img/progress.svg' %}" alt="progress"></button>
+            <button class="button pass" onclick="document.location='{% url "progress:total" %}'"><img src="{% static 'public/img/progress.svg' %}" alt="progress"></button>
             <button class="button pass" onclick="document.location='{% url "messenger:index" %}'"><img src="{% static 'public/img/message.svg' %}" alt="message"></button>
             <button class="button pass" onclick="document.location='{% url "events:index" %}'"><img src="{% static 'public/img/calendar.svg' %}" alt="calendar"></a>
             <div></div>
         </div>
         <div class="window">
+            {% if form.non_field_errors %}
+                <script>
+                    alert('{{form.non_field_errors.as_text }}');
+                </script>
+            {% endif %}
+            <form action="{% url 'profile:index' %}" style="height: 100%" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table  border="0" cellpadding="0" cellspacing="0" width="95%", height="100%", style="margin-left: auto; margin-right: auto; margin-top: auto;">
+                    <tr style="height: 5%;">
+                        <td style="text-align: center;">
+                        </td>
+                    </tr>
+                    <tr style="height: 20%">
+                        <td style="text-align: center;">
+                            <img src="{% if user.image %} {{user.image.url}} {% else %} {% static 'public/img/no_photo.png' %} {% endif %}" class="profile_img">
+                        </td>
+                    </tr>
+                    <tr style="height: 5%;">
+                        <td style="text-align: center;">
+                            {{ form.image }}
+                        </td>
+                    </tr>
+                    <tr style="height: 5%;">
+                        <td style="text-align: center;">
+                            {{ form.username }}
+                        </td>
+                    </tr>
+                    <tr style="height: 15%;">
+                        <td>
+                            <table width="100%", height="100%", border="0">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <div>
+                                            <label for="{{ form.first_name.id }}" class="profile_label">Имя</label>
+                                            {{ form.first_name }}
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <div>
+                                            <label for="{{ form.last_name.id }}" class="profile_label">Фамилия</label>
+                                            {{ form.last_name }}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 15%;">
+                        <td>
+                            <table width="100%", height="100%", border="0">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <div>
+                                            <label for="team" class="profile_label">Команда</label>
+                                            <input placeholder="Team" id='team' class='profile_input_field', readonly='readonly' value='{{user.team_id}}'>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <div>
+                                            <label for="{{ form.email.id }}" class="profile_label">Почта</label>
+                                            {{ form.email }}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr style="margin-top: 20%; margin-right:2%" color="#600F0F" size="3">
+                        </td>
+                    </tr>
+                    <tr style="height: 10%;">
+                        <td style="text-align: right;">
+                            <button type="submit" style="margin-right:2%;" class="profile_submit">Сохранить</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
         </div>
     </div>
     <div class="r-column"> </div>

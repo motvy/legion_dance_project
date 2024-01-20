@@ -8,6 +8,11 @@
             <p class="name-l">LEGIONER</p>
         </div>
         <div class="down">
+            {% if form.non_field_errors %}
+                <script>
+                    alert('{{form.non_field_errors.as_text }}');
+                </script>
+            {% endif %}
             <form class="external-field" action="{% url 'profile:login' %}", method="post">
                 {% csrf_token %}
                 <div class="field s">

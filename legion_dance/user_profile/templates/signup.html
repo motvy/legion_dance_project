@@ -8,40 +8,46 @@
             <p class="name-l">LEGIONER</p>
         </div>
         <div class="down">
-            <form class="external-field"> 
+            {% if form.non_field_errors %}
+                <script>
+                    alert('{{form.non_field_errors.as_text }}');
+                </script>
+            {% endif %}
+            <form class="external-field" action="{% url 'profile:signup' %}" autocomplete="off" method="post">
+                {% csrf_token %}
                 <div class="field b">
                     <img src="{% static 'public/img/user.svg' %}" alt="packet" class="img-field">
-                    <input type="text" placeholder="First Name" id="first_name" class="input-field">
+                    {{ form.first_name }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/user.svg' %}" alt="packet" class="img-field">
-                    <input type="text" placeholder="Last Name" id="second_name" class="input-field">
+                    {{ form.last_name }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/nickname.svg' %}" alt="packet" class="img-field">
-                    <input type="text" placeholder="Nickname" id="nick_name" class="input-field">
+                    {{ form.username }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/team.svg' %}" alt="packet" class="img-field">
-                    <input type="text" placeholder="Team" id="team" class="input-field">
+                    {{ form.team_id }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/packet.svg' %}" alt="packet" class="img-field">
-                    <input type="email" placeholder="Email" id="email" class="input-field">
+                    {{ form.email }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/password.svg' %}" alt="password" class="img-field">
-                    <input type="text" placeholder="Password" id="password" class="input-field">
+                    {{ form.password1 }}
                     <hr size="1" width="370px">
                 </div>
                 <div class="field b">
                     <img src="{% static 'public/img/password.svg' %}" alt="password" class="img-field">
-                    <input type="text" placeholder="Repeat Password" id="password_2" class="input-field">
+                    {{ form.password2 }}
                     <hr size="1" width="370px">
                 </div>
                 <button type="submit" class="submit_up signup"><p>SIGN UP</p></button>

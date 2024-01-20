@@ -9,5 +9,5 @@ class Chat(models.Model):
 class Message(models.Model):
     body = models.TextField()
     datetime = models.DateTimeField()
-    user_id = models.ForeignKey(to=profile_models.User, on_delete=models.PROTECT)
-    chat_id = models.ForeignKey(to=Chat, on_delete=models.PROTECT)
+    user_id = models.ForeignKey(to=profile_models.User, on_delete=models.CASCADE)
+    chat_id = models.ForeignKey(to=Chat, on_delete=models.CASCADE)

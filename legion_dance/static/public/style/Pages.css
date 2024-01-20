@@ -5,7 +5,7 @@
     border-radius: 17px;
     position: absolute;
     bottom: 22%;
-    right: 20%;
+    right: 2%;
     background-color: #1C1C1C;
 }
 .enter-l {
@@ -21,16 +21,17 @@
     display: grid;
     grid-template-columns: auto 1100px;
     height: 100%;
+    width: 100%;
 }
 .buttons-left {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding-bottom: 253px;
     display: grid;
     grid-template-rows: 80px 80px 80px 80px 1fr;
-    height: 100%; 
+    height: 95%; 
 }
 .window {
-    margin-top: 0px;
+    /* margin-top: 30px; */
     width: 100%;
     height: 95%;
     background: #313131;
@@ -63,4 +64,231 @@
 }
 .prog {
     border-radius: 30px 0 0 30px;
+}
+.profile_submit {
+    width: 180px;
+    height: 50px;
+    font-family: 'Gilroy';
+    font-size: 30px;
+    color: #c0c0c0;
+    border-radius: 25px;
+    /* mix-blend-mode: screen; */
+    background: #600F0F;
+    border: 0px;
+}
+.profile_label {
+    display: block;
+    background: transparent;
+    color: #600F0F; 
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    /* width: 400px; */
+    top: -10px;
+}
+.profile_input_field {
+    height: 50px; 
+    background: transparent;
+    /* mix-blend-mode: screen; */
+    border:1.2px solid #600F0F;
+    /* border-radius: 10px; */
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    width: 95%;
+    display: block;
+}
+
+.username_input_field {
+    height: 50px; 
+    background: transparent;
+    border: 0px;
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 400px;
+    margin-top: -30px;
+}
+
+.edit_caption {
+    height: 50px; 
+    background: transparent;
+    border: 0px;
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    /* width: 400px; */
+    margin-bottom: -30px;
+}
+
+.profile_img {
+    border: 4px solid #600F0F;
+    border-radius: 20px 20px 0 0;
+    width: 180px;
+    height: 180px;
+    border-collapse: collapse;
+    margin-bottom: -20px;
+    margin-top: 10px;
+}
+
+.img_profile_label {
+    height: 20px; 
+    background: transparent;
+    border: 0px;
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 180px;
+    margin-top: -10px;
+    /* margin-bottom: 20px; */
+}
+
+input[type=file]::file-selector-button {
+    width: 180px;
+    height: 20px;
+    font-family: 'Gilroy';
+    font-size: 15px;
+    color: #c0c0c0;
+    border-radius: 0 0 20px 20px;
+    /* mix-blend-mode: screen; */
+    background: #600F0F;
+    border: 0px;
+    /* padding-bottom: -10px; */
+    /* padding-top: 20px; */
+    /* cursor: pointer; */
+    /* transition: background .2s ease-in-out; */
+  }
+
+  .scroll_table{
+    overflow-y:scroll;
+    /* height:100px; */
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid #600F0F;
+ }
+
+ ::-webkit-scrollbar {
+    width: 0px;
+    height: 15px;
+    }
+::-webkit-scrollbar-track-piece  {
+    background-color: #600F0F;
+    }
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #c0c0c0;
+    }
+
+.progress_field {
+    height: 50px; 
+    background: transparent;
+    /* mix-blend-mode: screen; */
+    border: 0px;
+    border-radius: 10px;
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.progress_field_left {
+    height: 50px; 
+    background: transparent;
+    /* mix-blend-mode: screen; */
+    border: 0px;
+    border-radius: 10px;
+    color: #c0c0c0;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+.check_field {
+    background: transparent;
+    size: 10px;
+    /* mix-blend-mode: screen; */
+    /* border: 0px; */
+    /* border-radius: 10px; */
+    color: #c0c0c0;
+    /* font-family: 'Gilroy'; */
+    /* font-style: normal; */
+    /* font-size: 30px; */
+    /* white-space: nowrap;
+    overflow: hidden; */
+    /* text-align: center;
+    align-items: center;
+    align-items: c; */
+    /* width: 100%; */
+    width: 20px;
+    height: 20px;
+    /* display: flex; */
+}
+
+.progress_caption_field {
+    height: 50px; 
+    /* background: transparent; */
+    /* mix-blend-mode: screen; */
+    border: 0px;
+    color: #c0c0c0;
+    background: #600F0F;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.summa_field {
+    height: 50px; 
+    /* background: transparent; */
+    /* mix-blend-mode: screen; */
+    border: 0px;
+    color: #c0c0c0;
+    background: #600F0F;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 20%;
+    display: block;
+    margin-right: 5%;
+}
+
+.username_input_field:focus,
+.profile_input_field:focus,
+.progress_field:focus {
+    outline-width: 0;
 }

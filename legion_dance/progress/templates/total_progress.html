@@ -14,6 +14,7 @@
         }
         -->
     </script>
+
     <div class="l-column"> </div>
     <div class="center-column"> 
         <div class="buttons-left">
@@ -33,58 +34,59 @@
                         <!-- <hr style="width:99%; margin: auto;" size="1" color="262626"/> -->
                         <form name="menu">
                             <select class="form-control" style="background-color: #313131; color:#c0c0c0; font-family: 'Gilroy'; font-size: 40px; border: 0; border-radius: 3px;" name="sel" onChange="linklist(document.menu.sel)">
-                                <option style="font-size: 20px;"  value='{% url "progress:index" %}'>Мои достижения: {{user.exp}} XP</option>
+                            {% if user.is_teacher %}
                                 <option style="font-size: 20px;"  value='{% url "progress:total" %}'>Общий рейтинг</option>
+                                <option style="font-size: 20px;"  value='{% url "progress:achiev_edit" %}'>Редактор событий</option>
+                                <option style="font-size: 20px;"  value='{% url "progress:progress_edit" %}'>Редактор достижений</option>
+                            {% else %}
+                                <option style="font-size: 20px;"  value='{% url "progress:total" %}'>Общий рейтинг</option>
+                                <option style="font-size: 20px;"  value='{% url "progress:index" %}'>Мои достижения</option>
+                            {% endif %}
                             </select>
                         </form>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <table width="95%" height="95%" class="scroll_table" >
+                        <table width="95%" height="95%" class="scroll_table">
+                            <td style="text-align: center; width: 5%; border: 1px solid #600F0F">
+                                <input placeholder="" id='team' class='progress_caption_field', readonly='readonly' value='№'>
+                            </td>
                             <td style="text-align: center; border: 1px solid #600F0F;">
-                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Достижение'>
+                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Никнейм'>
                             </td>
                             <td style="text-align: center; border: 1px solid #600F0F">
-                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Событие'>
+                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Имя'>
                             </td>
                             <td style="text-align: center; border: 1px solid #600F0F">
-                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Дата получения'>
+                                <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Фамилия'>
                             </td>
                             <td style="text-align: center; border: 1px solid #600F0F">
                                 <input placeholder="Team" id='team' class='progress_caption_field', readonly='readonly' value='Опыт'>
                             </td>
-                            {% for a in achievs %}
+                            {% for my_user in users %}
                                 <tr style="width: 100%; height: 2%;">
                                     <td style="text-align: center; border: 1px solid #600F0F">
-                                        <label placeholder="-" id='team' class='progress_field_left' style="text-align: left; background: transparent;" readonly='readonly'>
-                                            {{a.achievement_id.achievement_name}}
-                                        </label>
-                                        <!-- <input placeholder="-" id='team' class='progress_caption_field' style="text-align: center; background: transparent;" readonly='readonly' value={{a.achievement_id.achievement_name}}> -->
+                                        <input placeholder="Team" id='team' class='progress_caption_field' style="text-align: center; background: transparent;" readonly='readonly' value={{forloop.counter}}>
                                     </td>
                                     <td style="text-align: center; border: 1px solid #600F0F">
-                                        <input placeholder="-" id='team' class='progress_field', readonly='readonly' value={{a.event_id.event_name}}>
-                                    </td> 
-                                    <td style="text-align: center; border: 1px solid #600F0F">
-                                        <input placeholder="-" id='team' class='progress_field', readonly='readonly' value={{a.date|date:"d.m.Y"}}>
+                                        <input placeholder="Team" id='team' class='progress_field', readonly='readonly' value={{my_user.username}}>
                                     </td>
                                     <td style="text-align: center; border: 1px solid #600F0F">
-                                        <input placeholder="-" id='team' class='progress_field', readonly='readonly' value={{a.achievement_id.exp_count}}>
+                                        <input placeholder="Team" id='team' class='progress_field', readonly='readonly' value={{my_user.first_name}}>
+                                    </td>
+                                    <td style="text-align: center; border: 1px solid #600F0F">
+                                        <input placeholder="Team" id='team' class='progress_field', readonly='readonly' value={{my_user.last_name}}>
+                                    </td>
+                                    <td style="text-align: center; border: 1px solid #600F0F">
+                                        <input placeholder="Team" id='team' class='progress_field', readonly='readonly' value={{my_user.exp}}>
                                     </td>
                                 </tr>
                             {% endfor %}
                         </table>
                     </td>
-                    <!-- <tr style="height: 10%;">
-                        <td align="right">
-                            <input placeholder="Team" id='team' class='summa_field' readonly='readonly' value='Дата получения'>
-                        </td>
-                    </tr> -->
                 </tr>
-                <tr style="height: 2%;">
-                    <td>
-
-                    </td>
+                <tr style="height: 4%;">
                 </tr>
             </table>
 

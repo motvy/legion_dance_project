@@ -10,6 +10,9 @@ class Team(models.Model):
 
 class User(AbstractUser):  
     image = models.ImageField(upload_to='users_images', null=True, blank=True)
-    team_id = models.ForeignKey(to=Team, on_delete=models.PROTECT, null=True)
+    team_id = models.ForeignKey(to=Team, on_delete=models.CASCADE, null=True)
     is_teacher = models.BooleanField(default=False)
     exp = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.username
